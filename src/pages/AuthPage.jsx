@@ -30,6 +30,7 @@ export default function AuthPage() {
       const confirmPassword = form.confirmPassword.value;
       if (payload.password !== confirmPassword) {
         setMessage("Passwords do not match");
+        console.log(message);
         return;
       }
 
@@ -43,6 +44,7 @@ export default function AuthPage() {
       navigate('/');
     } catch (err) {
       setMessage(err.message || 'Something went wrong');
+      console.log(message);
     }
   };
 
