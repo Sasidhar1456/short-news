@@ -34,9 +34,11 @@ export default function AuthPage() {
         return;
       }
 
-      payload.username = form.username.value;
+      payload.userName = form.username.value;
       payload.phoneNumber = form.phoneNumber.value;
     }
+
+    console.log(payload)
 
     try {
       const data = isLogin ? await login(payload) : await signup(payload);
