@@ -43,8 +43,9 @@ export default function AuthPage() {
       setTokens(data.accessToken, data.refreshToken, data.userName);
       navigate('/');
     } catch (err) {
-      setMessage(err.message || 'Something went wrong');
-      console.log(message);
+      const errorMsg = err.message || 'Something went wrong';
+      setMessage(errorMsg);
+      console.log(errorMsg);
     }
   };
 

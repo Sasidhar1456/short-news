@@ -8,6 +8,8 @@ export default defineConfig({
   server: {
     proxy: {
       '/user': 'http://localhost:5000'
-    }
+    },
+    
+    historyApiFallback: true
   }
 })
